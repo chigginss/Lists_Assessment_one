@@ -1,0 +1,118 @@
+Quiz Questions
+
+Which of the following is false regarding algorithms?
+A There are multiple appropriate algorithms that can be used to solve a maze.
+B Algorithms are language agnostic.
+C Binary search is a common algorithm used for sorting unordered collections.
+D While often relevant, the brute force approach can be grossly inefficient.
+
+Answer: D
+
+Using the Filesystem Diagram above, you are currently in the Documents directory. What command successfully renames the file todo.txt to todo-items.txt?
+A cp todo.txt todo-items.tt
+B cd ~/Documents/todo-items.txt
+C mv todo.txt ~/todo-items.txt
+D mv todo.txt todo-items.txt
+
+Answer: D 
+
+Using the Filesystem Diagram above, which of the following is NOT a valid way to change directories from static to notes?
+A cd ~/Documents/../notes/
+B cd ~/src/notes
+C cd ../../notes/
+D cd ../../../src/notes
+
+Answer: A
+
+In order to track a file using git, you must
+A Initialize a git repository in a local directory
+B Authenticate using Github
+C Run the command git log
+D Upload the file to Github
+
+Answer: A
+
+In the context of Git, a working directory is
+A The copy of the repository shared by the entire team
+B Your particular copy of a repository
+C The most recent copy of the repository on Github
+D The name of the directory that most recently changed
+
+Answer: B
+
+Lists are mutable because
+A They can be redefined as another list
+B Their contents can be modified without changing location in memory
+C They can be looped over
+D They are ordered and iterable
+
+Answer: B - their contents can be modified 
+
+Which of the following are immutable and ordered?
+A Lists and Sets
+B Tuples and Sets
+C Lists and Tuples
+D Strings and Tuples
+
+Answer: D - Strings and Tuples
+
+Read the following code snippet. What will be the output? Resist the urge to type this into the interactive Python interpreter. :)
+flowers = ["poppy", "mum", "daisy", "sunflower", "rose", "tiger lily"]
+my_num = len(flowers) - 1
+flowers = flowers[1:my_num]
+flowers_ordered = sorted(flowers)
+print flowers_ordered
+A ['daisy', 'mum', 'rose', 'sunflower']
+B None
+C ['daisy', 'mum', 'rose', 'sunflower', 'tiger lily']
+D IndexError: list index out of range
+
+Answer: A ['daisy', 'mum', 'rose', 'sunflower']
+
+Which of the following is not a valid approach to creating a tuple?
+A info = tuple('densuke')
+B info = tuple(['densuke'])
+C info = ('densuke')
+D info = ('densuke',)
+
+Answer: D 
+
+Given the following code snippet, which of the following is valid Python code?
+months = set(["Jan", "Feb", "Mar"])
+ratings = [5, 4, 5, 5, 2]
+dog_info = ('Arfy', 'kibble', 5)
+A dog_info[2] = 6
+B months.add("Apr")
+C ratings[5] = 3
+D months.append("May")
+
+Answer: D
+
+A constructor function
+A Is the only way to make a set
+B Can only create empty data structures
+C Is one of a few ways to create lists, tuples, and sets
+D Must be imported
+
+Answer: C
+
+Given the following code block, which of the choices are equivalent to the expression my_name is your_name ?
+my_name = "Balloonicorn"
+your_name = "Programmer Extraordinaire"
+A my_name is = your_name
+B id(my_name) == id(your_name)
+C my_name == your_name
+D my_name != your_name
+
+Answer: C
+
+Fill in the blank.
+A function ____Argument_________ is what a function takes as its parameters along
+with what it returns.
+
+Fill in the blank.
+Git is a _Tool for version control_______, whereas Github is a __web-based hosting service__________.
+
+In a 2-3 sentences, describe the difference between variables in Python and variables in the C programming language.
+
+Python and C have entirely different ways of tracking memory. Python removes instances in memory that are no longer used, while in C, you must remove an instance before you can reassign.
