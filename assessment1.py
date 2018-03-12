@@ -129,4 +129,4 @@ if __name__ == "__main__":
 
     result = doctest.testmod()
     if not result.failed:
-        print "\nALL TESTS PASSED. GOOD WORK!\n"
+        print "\nALL TESTS PASSED. GOOD WORK!\n"# skills-dictionaries-chigginss
