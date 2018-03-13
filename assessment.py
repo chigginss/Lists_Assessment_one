@@ -106,14 +106,16 @@ def shipping_cost(fruit):
         return 0 
     else: 
         return 5
-
     
-
 
 def append_to_list(lst, fruit):
     """Returns a new list consisting of the old list with the given number
-       added to the end.
+       added to the end."""
 
+    new_list = lst.append(fruit)
+    return new_list
+
+    """
     >>> append_to_list(['banana', 'apple', 'blackberry'], 'dragonfruit')
     ['banana', 'apple', 'blackberry', 'dragonfruit']
 
@@ -125,11 +127,7 @@ def append_to_list(lst, fruit):
 
     """
 
-   # new_list = lst.append(fruit)
-   # return new_list
-
-global_tax = .05
-def calculate_price(cost, AB, global_tax):
+def calculate_price(cost, abrev, global_tax = .05):
     """Calculate total price of an item, figuring in state taxes and fees.
 
     >>> calculate_price(40, "CA")
@@ -152,20 +150,20 @@ def calculate_price(cost, AB, global_tax):
 
     """
 
-# if AB == "CA":
-#    tax = cost * .03
-# elif AB == "PA":
-#     tax = cost * global_tax 
-#     (cost + tax) + 2
-# elif AB == "MA": 
-#     tax = cost * global_tax
-#     if cost < 100: 
-#         cost + 1 
-#     elif cost > 100: 
-#         cost + 3 
-#         tax + cost 
-# else:
-#     cost * global_tax
+    if abrev == "CA":
+        price = cost * (1 + global_tax) * 1.03
+    elif abrev == "PA":
+        price = (cost * (1 + global_tax)) + 2  
+    elif abrev == "MA": 
+        price = cost * (1 + global_tax)
+        if cost < 100: 
+            price = price + 1 
+        elif cost > 100: 
+            price = price + 3 
+    else:
+        price = cost * (1 + global_tax) 
+
+    return price
 
 
 ###############################################################################
@@ -192,18 +190,18 @@ def calculate_price(cost, AB, global_tax):
 #        >>> outer("Balloonicorn")
 #        ('Balloonicorn', 'BalloonicornBalloonicornBalloonicorn')
 
-# def arb_lists(lst, *args):
+    def arb_lists(lst, *args):
 
-#   """ """
-#     new_list = args.append(lst)
-#     return new_list
+      """ append lists with additional arguments """
+    new_list = lst + lst(args)
+    return new_list
 
-# def words_on_words(word):
-#     mult_by_three(word)
-#     def mult_by_three(word):
-#         word * 3 
-# answer = (words_on_words, mult_by_three)
-# return answer
+    def words_on_words(word):
+        mult_by_three(word)
+        def mult_by_three(word):
+            word * 3 
+        answer = (words_on_words, mult_by_three)
+        return answer
 
 
 ###############################################################################

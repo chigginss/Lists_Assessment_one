@@ -66,16 +66,20 @@ def words_in_common(words1, words2):
         ...    ["Lizard", "Turtle", "Python", "Python"]
         ...    )
         ['Python']
-    """
-    # new_words = []
+    """ 
+    new_words = []
 
-    # index = 0 
-    # while index < len(words1):
-    #     if words1[index] == words2[index]:
-    #         new_words.append(words1[index])
-    # index = index + 1 
+    # i = 0 
+    # while i < len(words1):
+    #     print "yuo"
+    # i += 1 
 
-    # return new_words
+    for item in words1: 
+        if item in words2: 
+            new_words.append(item)
+    final_words = sorted(new_words)
+
+    return list(set(final_words))
 
 
 def every_other_item(items):
@@ -93,8 +97,8 @@ def every_other_item(items):
 
     return items[::2]
 
-
 def smallest_n_items(items, n):
+
     """Return the `n` smallest integers in list, in descending order.
     You can assume that `n` will be less than the length of the list.
     For example::
@@ -108,19 +112,21 @@ def smallest_n_items(items, n):
     If there are duplicates in the list, they should be counted
     separately::
     >>> smallest_n_items([3, 1, 3, 2, 1, 1], 2)
-    [1, 1]
+    [1, 1]"""
 
-    """
+    lst = sorted(items)
+    while len(lst) > n:
+        del lst[-1]
+    return lst[::-1] 
+
     # new_items = []
-    # index = 0 
-
-    # while new_items < n: 
-    #     new_items.append('1')
-    #     index += 1 
-
-    # return new_items
-
-
+    # if n == 0:
+    #     return []
+    # else: 
+    #     for item in items: 
+    #         if n > len(new_items):
+    #             new_items.append(min(items)) 
+    
 #####################################################################
 # END OF ASSESSMENT: You can ignore everything below.
 
